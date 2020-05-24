@@ -108,7 +108,8 @@ class Board {
 
 	reachedGoal(pawnId, playerId){
 		let currentLoc = board.players[playerId].pawnIdToLocId.get(pawnId);
-		if(paths[playerId][-1] == currentLoc){
+		let last = path[0].length-1;
+		if(paths[playerId][last] == currentLoc){
 			return true;
 		}
 		return false;
